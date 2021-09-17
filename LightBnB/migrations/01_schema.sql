@@ -3,16 +3,23 @@ DROP TABLE IF EXISTS properties CASCADE;
 DROP TABLE IF EXISTS reservations CASCADE;
 DROP TABLE IF EXISTS property_reviews CASCADE;
 
-CREATE TABLE users(id SERIAL PRIMARY KEY NOT NULL, 
-name VARCHAR(255) NOT NULL ,
- email VARCHAR(255) NOT NULL,
-  password VARCHAR(255)NOT NULL);
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY NOT NULL, 
+  name VARCHAR(255) NOT NULL ,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255)NOT NULL
+  );
 
- CREATE TABLE reservations(id SERIAL PRIMARY KEY,start_date DATE, 
+ CREATE TABLE reservations(
+ id SERIAL PRIMARY KEY,
+ start_date DATE, 
  end_date DATE, 
- property_id INTEGER, guest_id INTEGER);
+ property_id INTEGER, 
+ guest_id INTEGER
+ );
 
- CREATE TABLE properties(id SERIAL PRIMARY KEY, 
+ CREATE TABLE properties(
+   id SERIAL PRIMARY KEY, 
  owner_id INTEGER, 
  title VARCHAR(255),
  description TEXT,
@@ -27,10 +34,13 @@ name VARCHAR(255) NOT NULL ,
  city VARCHAR(255),
  province VARCHAR(255),
  post_code VARCHAR(255),
- active BOOLEAN);
+ active BOOLEAN
+ );
 
- CREATE TABLE property_reviews(id SERIAL PRIMARY KEY,
+ CREATE TABLE property_reviews(
+   id SERIAL PRIMARY KEY,
  guess_id INTEGER, property_id INTEGER,
  reservation_id INTEGER, 
  rating SMALLINT,
- message TEXT);
+ message TEXT
+ );

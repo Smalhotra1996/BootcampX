@@ -44,7 +44,7 @@ INSERT INTO users
     VALUES (2,'fancyproperty','Properties description',
     ' dgcyuffdtcd.com',' dgcyuffdtcd.com', 100,200,
     10,2,'canada','QUeen elizabeth',
-    'vsgvdsg','nic','defef',true),
+    'Vancouver','nic','defef',true),
     (1,'fancyprdfdoperty','Propedfdrties dessdfcription',
     ' dgcyuffddfstcd.com',' dgcyusdfffdtcd.com', 1030,3200,
     10,12,'canadsda','QUeen elizabeth',
